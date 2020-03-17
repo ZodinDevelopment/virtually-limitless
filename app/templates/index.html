@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Virtually Limitless Youth</h1>
+<br>
+<h3>Hi {{ user.username }}!</h3>
+<br>
+{% for post in posts %}
+    <table>
+        <tr>
+            <td><h4>{{ post.headline }}</h4></td><
+        </tr>
+
+        <tr>
+
+            <td><strong>{{ post.author.username }}</strong></td>
+            <td><i>{{ post.date_time_posted }}</li></td>
+
+        </tr>
+        <tr>
+            <td><p>{{ post.body }}</p></td>
+        </tr>
+    </table>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Virtually Limitless</title>
+        {% else %}
+        <title>Virtually Limitless Youth</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>Virtually Limitless: <a href="{{ url_for('index') }}">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
+
