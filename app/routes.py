@@ -26,8 +26,14 @@ def index():
     return render_template("index.html", title="Dashboard", user=user, posts=posts)
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     # this is like the function above but will handle more data and has a FlaskForm initialized
     form = LoginForm()
-    return render_template('login.html')
+    if form.validate_on_submit():
+        flash("User '{}' requesting login..".format( form.username.data ))
+        return redirect(url_for('index'))
+    return render_template('login.html', title="Sign In", form=form)
+
+
+
