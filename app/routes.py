@@ -1,6 +1,8 @@
 from datetime import datetime
 from flask import flash, render_template, redirect, url_for, request
 from app import app
+from app.forms import LoginForm
+
 
 @app.route('/')
 def index():
@@ -22,3 +24,10 @@ def index():
         }
     ]
     return render_template("index.html", title="Dashboard", user=user, posts=posts)
+
+
+@app.route('/login')
+def login():
+    # this is like the function above but will handle more data and has a FlaskForm initialized
+    form = LoginForm()
+    return render_template('login.html')
