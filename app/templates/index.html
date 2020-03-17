@@ -9,18 +9,21 @@
     <table>
         <tr>
             <td><h3>{{ post.headline }}</h3></td>
-        </tr>
-
-        <tr>
-
-            <td><strong>{{ post.author.username }}</strong></td>
             <td><i>{{ post.date_time_posted }}</li></td>
+        </tr>
+        <tr>
+            <td><strong>{{ post.author.username }}</strong></td>
+            <td></td>
 
         </tr>
         <tr>
             <td><p>{{ post.body }}</p></td>
         </tr>
     </table>
+    <hr>
+    <br>
+    <br>
+
 {% endfor %}
 
 {% endblock %}
