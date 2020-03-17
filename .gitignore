@@ -26,3 +26,5 @@ app.db
 limitless.log*
 
 *.geany
+
+.flaskenv 
