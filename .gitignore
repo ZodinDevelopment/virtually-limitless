@@ -25,4 +25,4 @@ venv
 app.db
 limitless.log*
 
-
+*.geany
